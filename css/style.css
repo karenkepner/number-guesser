@@ -1,0 +1,52 @@
+/* css for number guesser game by karen kepner */
+body {
+  font-family: "Open Sans", sans-serif, Arial;
+  margin: 0px auto;
+}
+
+header {
+  background-color: #404041;
+  text-align: center;
+}
+
+main {
+  text-align: center;
+}
+
+.number {
+  color: #ED458B;
+  display: inline-block;
+  padding: 5px;
+}
+
+.guesser {
+  color: #E6E7E8;
+  display: inline-block;
+}
+
+.randomGuess {
+  display: block;
+  margin: 0px auto;
+  width: 20%;
+  height: 20px;
+  border-radius: 1px;
+
+}
+
+button {
+  color: #FFFFFF;
+  background-color: #929497;
+  border-radius: 15px;
+  display: inline-block;
+  width: 20%;
+  margin: 10px auto;
+  padding: 10px;
+  border: 0px;
+}
+
+button:hover {
+  background-color: #EB008B;
+}
+
+.guessInput {
+}
