@@ -3,19 +3,22 @@
   <head>
     <title>Number Guesser</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" >
-    <link rel="javascript" type="text/javascript" href="js/main.js" >
   </head>
   <body>
+
     <header>
       <h1><span class="number">Number </span><span class="guesser">Guesser</span></h1>
     </header>
+
     <main>
-      <input type="text" value="Enter your guess" class="randomGuess"></input>
+      <input type="text" placeholder="Enter your guess" class="randomGuess"></input>
       <button class="guessInput">Guess</button><button class="clearInput">Clear</button>
-      <h2>your last guess was</h2>
-      <p class="bigLastGuess"></p>
+      <h2 class="lastGuess">your last guess was</h2>
+      <p class="bigLastGuess">42</p>
       <h2 class="feedback">you are awesome<h2>
       <button class="reset">Reset</button>
     </main>
+
   </body>
+  <script type="text/javascript" src="js/main.js" ></script>
 </html>

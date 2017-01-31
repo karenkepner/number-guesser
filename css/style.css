@@ -7,27 +7,32 @@ body {
 header {
   background-color: #404041;
   text-align: center;
+  font-size: 2em;
 }
 
 main {
   text-align: center;
+  width:50%;
+  margin: 0px auto;
 }
 
 .number {
   color: #ED458B;
   display: inline-block;
   padding: 5px;
+  font-weight: 700;
 }
 
 .guesser {
   color: #E6E7E8;
   display: inline-block;
+  font-weight: 300;
 }
 
 .randomGuess {
   display: block;
   margin: 0px auto;
-  width: 20%;
+  width: 50%;
   height: 20px;
   border-radius: 1px;
 
@@ -36,17 +41,32 @@ main {
 button {
   color: #FFFFFF;
   background-color: #929497;
-  border-radius: 15px;
+  border-radius: 20px;
   display: inline-block;
   width: 20%;
   margin: 10px auto;
   padding: 10px;
   border: 0px;
+  font-size: 1em;
 }
 
 button:hover {
   background-color: #EB008B;
 }
+.lastGuess {
+    color: #404041;
+}
+
+.bigLastGuess {
+    font-size: 10em;
+    color: #EB008B;
+    margin: 0px;
+    height: 200px;
+}
 
 .guessInput {
+}
+
+.reset{
+  width: 30%;
 }

@@ -1,5 +1,7 @@
 var answer = Math.floor(Math.random() * 10);
 
+var guessBtn = document.querySelector('.number');
+document.querySelector(".lastBigGuess").innerText = answer;
 
 var guess = parseInt(document.getElementById('.numberGuess'));
 guess.addEventListener("click", function(){
