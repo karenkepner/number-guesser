@@ -34,6 +34,7 @@ guessInput.addEventListener("click", function(){
       h2.innerText = "That is too low.";
     } else if (playerGuess.value == answer) {
       h2.innerText = "BOOM!!!";
+      break;
     } else {
       h2.innerText = "Your guess must be a number in the correct range.";
     };
