@@ -1,18 +1,16 @@
 var answer = Math.floor(Math.random() * 10);
 
-var guessBtn = document.querySelector('.number');
+var playerGuess = document.querySelector('.numberGuess')
 
-document.querySelector(".lastBigGuess").innerText = answer;
-
-var guess = parseInt(document.getElementById('.numberGuess'));
-guess.addEventListener("click", function(){
-if (guess > answer){
-  h2.innerText =  "That is too high.";
-} else if (guess < answer) {
-  h2.innerText = "That is too low.";
-} else if (guess == answer) {
-  h2.innerText = "BOOM!!!";
-} else {
-  return "Your guess must be a number in the correct range.";
-};
+playerGuess.addEventListener("click", function(){
+  var h2 = document.querySelector(".feedback");
+    if (playerGuess > answer){
+      h2.innerText =  "That is too high.";
+    } else if (playerGuess < answer) {
+      h2.innerText = "That is too low.";
+    } else if (playerGuess == answer) {
+      h2.innerText = "BOOM!!!";
+    } else {
+      h2.innerText = "Your guess must be a number in the correct range.";
+    };
 })
