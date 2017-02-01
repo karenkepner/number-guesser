@@ -29,7 +29,7 @@ main {
   font-weight: 300;
 }
 
-.numberGuess {
+.number-guess {
   display: block;
   margin: 0px auto;
   width: 50%;
@@ -44,27 +44,29 @@ button {
   border-radius: 20px;
   display: inline-block;
   width: 20%;
+  min-width: 100px;
   margin: 10px auto;
   padding: 10px;
   border: 0px;
   font-size: 1em;
+  outline: none;
 }
 
 button:hover {
   background-color: #EB008B;
 }
-.lastGuess {
+.last-guess {
     color: #404041;
 }
 
-.bigLastGuess {
+.big-last-guess {
     font-size: 10em;
     color: #EB008B;
     margin: 0px;
     height: 200px;
 }
 
-.guessInput {
+.guess-input {
 }
 
 .reset{
