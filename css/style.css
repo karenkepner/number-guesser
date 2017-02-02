@@ -54,9 +54,9 @@ input {
 }
 
 button {
-  color: #FFFFFF;
   background-color: #929497;
   border-radius: 26px;
+  color: #FFFFFF;
   display: inline-block;
   width: 25%;
   min-width: 100px;
@@ -119,7 +119,7 @@ button:hover:enabled {
   input {
     width: 90%;
   }
-  
+
   .number-guess {
     width: 90%;
   }
