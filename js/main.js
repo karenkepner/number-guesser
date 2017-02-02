@@ -30,17 +30,25 @@ window.onload = function() {
 var playerGuess = document.querySelector('.number-guess');
 
 guessInput.addEventListener("click", function(){
-    var h2 = document.querySelector(".feedback");
-    if (playerGuess.value > answer && playerGuess.value < maxGuess){
-      h2.innerText =  "That is too high.";
-    } else if (playerGuess.value < answer && playerGuess.value > minGuess) {
-      h2.innerText = "That is too low.";
-    } else if (playerGuess.value == answer) {
-      h2.innerText = "BOOM!!!";
-    } else {
-      h2.innerText = "Your guess must be a number between " + minGuess + " and " + maxGuess + ".";
-    };
+  compareGuess();
+  var displayGuess = document.querySelector('.big-last-guess');
+  displayGuess.innerText = playerGuess.value;
 })
+
+function compareGuess(){
+  var h2 = document.querySelector(".feedback");
+  if (playerGuess.value > answer && playerGuess.value < maxGuess){
+    h2.innerText =  "That is too high.";
+  } else if (playerGuess.value < answer && playerGuess.value > minGuess) {
+    h2.innerText = "That is too low.";
+  } else if (playerGuess.value == answer) {
+    h2.innerText = "BOOM!!!";
+    generateNumber();
+  } else {
+    h2.innerText = "Your guess must be a number between " + minGuess + " and " + maxGuess + ".";
+  };
+}
+
 
 //clear the last guess
 clearInput.addEventListener('click', function (){
@@ -51,11 +59,10 @@ clearInput.addEventListener('click', function (){
 reset.addEventListener('click', function (){
   window.location.reload();
 })
-//display the players' last guess
-guessInput.addEventListener("click", function(){
-  var displayGuess = document.querySelector('.big-last-guess');
-  displayGuess.innerText = playerGuess.value;
-})
+// //display the players' last guess
+// guessInput.addEventListener("click", function(){
+// })
+
 //this disables the buttons when there is no value in the guess input.
  numberGuess.addEventListener('keyup', function(){
    clearInput.disabled=false;
