@@ -8,7 +8,7 @@ header {
   background-color: #404041;
   text-align: center;
 }
-
+/*heading styles*/
 h1 {
     margin-top: 0px;
     margin-bottom: 0px;
@@ -27,14 +27,15 @@ h1 {
   font-weight: 300;
 }
 
+/*main body styles*/
 main {
   text-align: center;
   margin: 0px auto;
 }
 
 input {
-  margin: 0px auto;
-  height: 40px;
+  margin: 5px auto;
+  height: 30px;
   padding: 0px 10px;
   border-radius: 5px;
   border-style: solid;
@@ -47,12 +48,9 @@ input {
 
 .number-guess {
   display: block;
-  margin: 1px auto;
-  width: 40%;
-  height: 40px;
-  border-style: solid;
+  margin: 20px auto 10px auto;
+  width: 50%;
   border-color: #D0D2D3;
-  font-size: 1em;
 }
 
 button {
@@ -62,7 +60,7 @@ button {
   display: inline-block;
   width: 25%;
   min-width: 100px;
-  margin: 10px auto;
+  margin: 10px;
   padding: 2px;
   border: none;
   font-size: 1.1em;
@@ -83,12 +81,54 @@ button:hover:enabled {
 }
 
 .big-last-guess {
-    font-size: 5em;
+    font-size: 8em;
     color: #EB008B;
     margin: 0px;
-    min-height: 100px;
+    min-height: 150px;
 }
 
 .reset{
   width: 50%;
+  font-size: 1em;
+}
+
+.range {
+  width: 20%;
+  clear: right;
+}
+
+.range-change {
+    width: 50%;
+    margin: 10px;
+}
+
+/*media query changes to layout for 420px screen*/
+@media (max-width: 600px) {
+  button {
+    display: inline;
+    width: 90%;
+  }
+  .guess-input {
+    clear: both;
+  }
+
+  .reset {
+    width: 90%;
+  }
+
+  input {
+    width: 90%;
+  }
+  .number-guess {
+    width: 90%;
+  }
+
+  .range {
+    width: 80%;
+    margin: 5px 0px;
+  }
+
+  .range-change {
+    width: 80%;
+  }
 }

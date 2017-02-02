@@ -14,17 +14,23 @@
     <main>
       <section class="main-game">
         <input type="text" placeholder="Enter your guess" class="number-guess"></input>
-        <button class="guess-input" disabled="true">Guess</button><button class="clear-input" disabled="true">Clear</button>
-        <p class="last-guess">your last guess was</p>
+
+        <button class="guess-input" disabled="true">Guess</button>
+        <button class="clear-input" disabled="true">Clear</button>
+
+        <p class="last-guess">Your last guess was</p>
         <p class="big-last-guess"></p>
         <p class="feedback">Let's play.<p>
+
         <button class="reset" disabled="true">Reset</button>
       </section>
-      <section class="range">
-        <p class="range-header">Set a New Range</p>
-        <input type="text" placeholder="1" class="range-min "></input>
-        <input type="text" placeholder="100" class="range-max "></input>
+
+      <section>
+        <input type="text" placeholder="New Min Value" class="range-min range"></input>
+        <input type="text" placeholder="New Max Value" class="range-max range"></input>
       </section>
+        <button class="range-change" disabled="true">Submit a New Range</button>
+
     </main>
 
   </body>

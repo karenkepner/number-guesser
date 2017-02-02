@@ -3,19 +3,18 @@
 var answer;
 
 //create a variable for each button/input
-var numberGuess = document.querySelector('.number-guess')
+var numberGuess = document.querySelector('.number-guess');
 var guessInput = document.querySelector('.guess-input');
 var clearInput = document.querySelector('.clear-input');
 var reset = document.querySelector('.reset');
 //create other cool variables
-var bigLastGuess = document.querySelector('.big-last-guess')
+var bigLastGuess = document.querySelector('.big-last-guess');
+var newMin = document.querySelector('.range-min');
+var newMax = document.querySelector('.range-max');
 
 //these are for adding the range
 var minGuess = 1;
 var maxGuess = 100;
-
-//receive the input from the range chooser fields.
-
 
 //generate the random number for the player to guess
 function generateNumber( ) {
@@ -28,7 +27,7 @@ window.onload = function() {
 }
 
 //evaluate the players guess
-var playerGuess = document.querySelector('.number-guess')
+var playerGuess = document.querySelector('.number-guess');
 
 guessInput.addEventListener("click", function(){
     var h2 = document.querySelector(".feedback");
