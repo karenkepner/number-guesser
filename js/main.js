@@ -2,6 +2,7 @@
 //create a variable to store the answer
 var answer;
 
+
 //create a variable for each button/input
 var numberGuess = document.querySelector('.number-guess');
 var guessInput = document.querySelector('.guess-input');
@@ -12,15 +13,19 @@ var bigLastGuess = document.querySelector('.big-last-guess');
 var newMin = document.querySelector('.range-min');
 var newMax = document.querySelector('.range-max');
 
+
 //these are for adding the range
 var minGuess = 1;
 var maxGuess = 100;
+
 
 //generate the random number for the player to guess
 function generateNumber( ) {
   answer = Math.floor((Math.random() * maxGuess) + minGuess);
   console.log(answer);
 }
+
+
 //this triggers the random number to generate on page load
 window.onload = function() {
   generateNumber();
@@ -49,7 +54,6 @@ function compareGuess(){
   };
 }
 
-
 //clear the last guess
 clearInput.addEventListener('click', function (){
   document.querySelector('.number-guess').value = "";
@@ -59,9 +63,6 @@ clearInput.addEventListener('click', function (){
 reset.addEventListener('click', function (){
   window.location.reload();
 })
-// //display the players' last guess
-// guessInput.addEventListener("click", function(){
-// })
 
 //this disables the buttons when there is no value in the guess input.
  numberGuess.addEventListener('keyup', function(){
@@ -69,3 +70,8 @@ reset.addEventListener('click', function (){
    guessInput.disabled=false;
    reset.disabled=false;
  })
+
+//set new min and max
+//collect the user input values of max and min when the player presses submit new range.
+//assign new values to  max and min
+// tell user new range at the bottom in a <p>
