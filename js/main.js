@@ -14,9 +14,12 @@ var bigLastGuess = document.querySelector('.big-last-guess')
 var minGuess = 1;
 var maxGuess = 100;
 
+//receive the input from the range chooser fields.
+
+
 //generate the random number for the player to guess
 function generateNumber( ) {
-  answer = Math.floor((Math.random() * 100) + 1);
+  answer = Math.floor((Math.random() * maxGuess) + minGuess);
   console.log(answer);
 }
 //this triggers the random number to generate on page load
@@ -29,16 +32,17 @@ var playerGuess = document.querySelector('.number-guess')
 
 guessInput.addEventListener("click", function(){
     var h2 = document.querySelector(".feedback");
-    if (playerGuess.value > answer){
+    if (playerGuess.value > answer && playerGuess.value < maxGuess){
       h2.innerText =  "That is too high.";
-    } else if (playerGuess.value < answer) {
+    } else if (playerGuess.value < answer && playerGuess.value > minGuess) {
       h2.innerText = "That is too low.";
     } else if (playerGuess.value == answer) {
       h2.innerText = "BOOM!!!";
     } else {
-      h2.innerText = "Your guess must be a number in the correct range.";
+      h2.innerText = "Your guess must be a number between " + minGuess + " and " + maxGuess + ".";
     };
 })
+
 //clear the last guess
 clearInput.addEventListener('click', function (){
   document.querySelector('.number-guess').value = "";
