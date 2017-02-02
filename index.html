@@ -3,6 +3,7 @@
   <head>
     <title>Number Guesser</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" >
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet">
   </head>
   <body>
 
@@ -11,12 +12,19 @@
     </header>
 
     <main>
-      <input type="text" placeholder="Enter your guess" class="number-guess"></input>
-      <button class="guess-input">Guess</button><button class="clear-input">Clear</button>
-      <h2 class="last-guess">your last guess was</h2>
-      <p class="big-last-guess">00</p>
-      <h2 class="feedback">You are awesome.<h2>
-      <button class="reset">Reset</button>
+      <section class="main-game">
+        <input type="text" placeholder="Enter your guess" class="number-guess"></input>
+        <button class="guess-input" disabled="true">Guess</button><button class="clear-input" disabled="true">Clear</button>
+        <p class="last-guess">your last guess was</p>
+        <p class="big-last-guess"></p>
+        <p class="feedback">Let's play.<p>
+        <button class="reset" disabled="true">Reset</button>
+      </section>
+      <section class="range">
+        <p class="range-header">Set a New Range</p>
+        <input type="text" placeholder="Range minimum" class="range-min "></input>
+        <input type="text" placeholder="Range maximum" class="range-max "></input>
+      </section>
     </main>
 
   </body>

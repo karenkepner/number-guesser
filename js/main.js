@@ -17,6 +17,7 @@ var maxGuess = 100;
 //generate the random number for the player to guess
 function generateNumber( ) {
   answer = Math.floor((Math.random() * 100) + 1);
+  console.log(answer);
 }
 //this triggers the random number to generate on page load
 window.onload = function() {
@@ -34,18 +35,27 @@ guessInput.addEventListener("click", function(){
       h2.innerText = "That is too low.";
     } else if (playerGuess.value == answer) {
       h2.innerText = "BOOM!!!";
-      break;
     } else {
       h2.innerText = "Your guess must be a number in the correct range.";
     };
 })
 //clear the last guess
 clearInput.addEventListener('click', function (){
-
+  document.querySelector('.number-guess').value = "";
 })
 
+//reset the game with the reset button
+reset.addEventListener('click', function (){
+  window.location.reload();
+})
 //display the players' last guess
 guessInput.addEventListener("click", function(){
   var displayGuess = document.querySelector('.big-last-guess');
   displayGuess.innerText = playerGuess.value;
 })
+//this disables the buttons when there is no value in the guess input.
+ numberGuess.addEventListener('keyup', function(){
+   clearInput.disabled=false;
+   guessInput.disabled=false;
+   reset.disabled=false;
+ })
