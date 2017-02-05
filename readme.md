@@ -1,7 +1,7 @@
 #### readme file for Number Guesser project
 
 //Comps were supplied for a number guessing game.
-
+#### This is the commit that I submitted for the assignment.
 This project includes HTML, CSS, and JavaScript to build an interactive number guessing game.
 
 Google fonts were used to match the comp.
